@@ -1,0 +1,43 @@
+---
+title: Agents & Agentic Loops
+description: Autonomous AI systems that perceive, plan, act, and observe in development workflows.
+category: concept
+---
+
+## What is an AI coding agent?
+
+An AI coding agent is a system that can **autonomously execute multi-step development tasks** — reading files, writing code, running tests, and iterating on failures — with minimal human intervention.
+
+## The agent loop
+
+```
+Perceive → Plan → Act → Observe → (repeat)
+```
+
+1. **Perceive**: Read codebase, terminal output, error messages
+2. **Plan**: Break task into steps, select tools
+3. **Act**: Edit files, run commands, create PRs
+4. **Observe**: Check results, detect failures
+5. **Repeat** until task is complete or blocked
+
+## Agent categories
+
+### IDE agents
+Cursor Agent, Copilot Coding Agent — operate within your editor with file and terminal access.
+
+### Terminal agents
+Claude Code, OpenAI Codex CLI — command-line native, scriptable and CI-friendly.
+
+### Cloud agents
+Devin, GitHub Copilot Workspace — run in remote environments, work on issues asynchronously.
+
+## Key capabilities
+
+- **Tool use**: Shell commands, file I/O, web search, MCP tools
+- **Multi-file editing**: Coordinated changes across a codebase
+- **Self-correction**: Reading error output and retrying
+- **Delegation**: Spawning subagents for parallel work
+
+## Limitations
+
+Agents are not autonomous engineers. They require clear task scoping, human review of changes, and guardrails for destructive operations. The Stack Overflow 2025 survey found 52% of developers still don't use agents.

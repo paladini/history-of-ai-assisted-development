@@ -1,0 +1,509 @@
+- id: copilot-preview-2021
+  date: 2021-06-29
+  era: inline-pair-programming
+  title: "GitHub Copilot Technical Preview"
+  summary: "GitHub and OpenAI launch the first widely available AI pair programmer as a VS Code extension. Copilot suggests whole lines and functions from natural language comments, trained on public GitHub code."
+  category: tool
+  sources:
+    - label: "GitHub Blog"
+      url: "https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/"
+    - label: "OpenAI"
+      url: "https://openai.com/index/github-copilot/"
+
+- id: codex-api-2021
+  date: 2021-08-10
+  era: inline-pair-programming
+  title: "OpenAI Codex API Announced"
+  summary: "OpenAI releases Codex, the model powering Copilot, via API. Developers can build custom code-completion tools, seeding an ecosystem of AI coding assistants beyond GitHub's integration."
+  category: tool
+  sources:
+    - label: "OpenAI"
+      url: "https://openai.com/index/openai-codex/"
+
+- id: tabnine-enterprise-2021
+  date: 2021-11-15
+  era: inline-pair-programming
+  title: "Tabnine Enterprise Launch"
+  summary: "Tabnine expands beyond individual developers with enterprise offerings, demonstrating demand for privacy-focused, locally-trained code completion before the Copilot GA wave."
+  category: tool
+  sources:
+    - label: "Tabnine Blog"
+      url: "https://www.tabnine.com/blog/tabnine-enterprise/"
+
+- id: copilot-ga-2022
+  date: 2022-06-21
+  era: inline-pair-programming
+  title: "GitHub Copilot Generally Available"
+  summary: "Copilot exits preview for all individual developers at $10/month. GitHub reports developers write 40% of code in files where Copilot is enabled, validating inline AI assistance at scale."
+  category: tool
+  sources:
+    - label: "GitHub Blog"
+      url: "https://github.blog/news-insights/product-news/github-copilot-is-generally-available-to-all-developers/"
+  stats:
+    - label: "Code in enabled files"
+      value: "40%"
+      source: "GitHub GA announcement, Jun 2022"
+    - label: "Preview developers"
+      value: "1.2M+"
+      source: "GitHub GA announcement, Jun 2022"
+
+- id: copilot-business-2022
+  date: 2022-12-08
+  era: inline-pair-programming
+  title: "GitHub Copilot for Business"
+  summary: "GitHub launches Copilot for Business with organization-wide license management, IP indemnity, and policy controls — signaling enterprise adoption of AI pair programming."
+  category: tool
+  sources:
+    - label: "GitHub Blog"
+      url: "https://github.blog/2022-12-08-github-copilot-for-business-is-now-available/"
+
+- id: chatgpt-launch-2022
+  date: 2022-11-30
+  era: inline-pair-programming
+  title: "ChatGPT Public Launch"
+  summary: "OpenAI releases ChatGPT, demonstrating conversational AI to hundreds of millions of users. Developers begin using it for code explanation, debugging, and generation outside dedicated IDE tools."
+  category: culture
+  sources:
+    - label: "OpenAI"
+      url: "https://openai.com/index/chatgpt/"
+
+- id: so-survey-2023-ai
+  date: 2023-06-13
+  era: conversational-ide
+  title: "Stack Overflow 2023: 70% AI Adoption"
+  summary: "The Stack Overflow Developer Survey reports 70% of developers are using or planning to use AI tools. Trust in AI accuracy stands at 40%, establishing a baseline for the trust paradox narrative."
+  category: data
+  sources:
+    - label: "Stack Overflow Survey 2023"
+      url: "https://survey.stackoverflow.co/2023/"
+  stats:
+    - label: "Using or planning AI"
+      value: "70%"
+    - label: "Trust AI output"
+      value: "40%"
+
+- id: cursor-launch-2023
+  date: 2023-03-01
+  era: ai-native-editors
+  title: "Cursor IDE Launch"
+  summary: "Anysphere launches Cursor, a VS Code fork built AI-first from the ground up. The thesis: AI cannot be bolted on — the entire editor must be reimagined around LLM capabilities."
+  category: tool
+  sources:
+    - label: "Cursor"
+      url: "https://cursor.com/"
+    - label: "TechCrunch"
+      url: "https://techcrunch.com/2023/10/11/anysphere-raises-8m-to-build-an-ai-powered-ide/"
+
+- id: copilot-x-preview-2023
+  date: 2023-03-22
+  era: conversational-ide
+  title: "GitHub Copilot X Preview"
+  summary: "GitHub unveils Copilot X, adding chat, pull request summaries, docs generation, and CLI assistance. The shift from inline completion to conversational developer experience begins."
+  category: tool
+  sources:
+    - label: "GitHub Blog"
+      url: "https://github.blog/news-insights/product-news/github-copilot-x-the-ai-powered-developer-experience/"
+
+- id: gpt4-launch-2023
+  date: 2023-03-14
+  era: conversational-ide
+  title: "GPT-4 Released"
+  summary: "OpenAI releases GPT-4 with significantly improved coding capabilities. Benchmark scores on HumanEval and real-world coding tasks jump, powering the next generation of AI dev tools."
+  category: tool
+  sources:
+    - label: "OpenAI"
+      url: "https://openai.com/index/gpt-4-research/"
+
+- id: replit-ghostwriter-chat-2023
+  date: 2023-05-10
+  era: conversational-ide
+  title: "Replit Ghostwriter Chat"
+  summary: "Replit adds conversational AI to its browser-based IDE, targeting beginners and rapid prototyping. Cloud-native development with integrated AI chat gains traction."
+  category: tool
+  sources:
+    - label: "Replit Blog"
+      url: "https://blog.replit.com/ghostwriter-chat"
+
+- id: codeium-free-2023
+  date: 2023-04-01
+  era: ai-native-editors
+  title: "Codeium Free Tier Expansion"
+  summary: "Codeium offers free AI code completion for individuals, competing with Copilot on price. The market for AI coding assistants diversifies beyond GitHub's ecosystem."
+  category: tool
+  sources:
+    - label: "Codeium"
+      url: "https://codeium.com/"
+
+- id: amazon-codewhisperer-ga-2023
+  date: 2023-04-13
+  era: inline-pair-programming
+  title: "Amazon CodeWhisperer GA"
+  summary: "AWS launches CodeWhisperer for individual developers with a free tier. Enterprise security scanning and AWS API specialization differentiate it from Copilot."
+  category: tool
+  sources:
+    - label: "AWS News"
+      url: "https://aws.amazon.com/about-aws/whats-new/2023/04/amazon-codewhisperer-generally-available/"
+
+- id: sourcegraph-cody-2023
+  date: 2023-05-01
+  era: conversational-ide
+  title: "Sourcegraph Cody GA"
+  summary: "Sourcegraph launches Cody, a codebase-aware AI assistant using embeddings search across entire repositories. Early example of RAG-powered context in developer tools."
+  category: tool
+  sources:
+    - label: "Sourcegraph Blog"
+      url: "https://sourcegraph.com/blog/cody-general-availability"
+
+- id: copilot-chat-ga-2023
+  date: 2023-12-29
+  era: conversational-ide
+  title: "GitHub Copilot Chat GA"
+  summary: "Copilot Chat exits beta for all individual users. Developers can now ask questions, explain code, and generate tests in a sidebar — completing the conversational IDE transition."
+  category: tool
+  sources:
+    - label: "GitHub Blog"
+      url: "https://github.blog/changelog/2023-12-29-github-copilot-chat-now-generally-available/"
+
+- id: so-survey-2024-ai
+  date: 2024-05-28
+  era: ai-native-editors
+  title: "Stack Overflow 2024: 76% AI Adoption"
+  summary: "AI tool adoption rises to 76% while favorability drops to 72%. Developers use AI more but grow more skeptical — the trust paradox intensifies."
+  category: data
+  sources:
+    - label: "Stack Overflow Survey 2024"
+      url: "https://survey.stackoverflow.co/2024/AI"
+  stats:
+    - label: "Using or planning AI"
+      value: "76%"
+    - label: "Favorable toward AI"
+      value: "72%"
+
+- id: devin-launch-2024
+  date: 2024-03-12
+  era: agentic-development
+  title: "Devin AI Agent Launch"
+  summary: "Cognition Labs introduces Devin, marketed as the first AI software engineer. Devin operates in a sandboxed cloud environment with browser, terminal, and editor — pioneering autonomous agentic development."
+  category: tool
+  sources:
+    - label: "Cognition"
+      url: "https://www.cognition.ai/blog/introducing-devin"
+    - label: "TechCrunch"
+      url: "https://techcrunch.com/2024/03/12/cognition-labs-unveils-devin-an-ai-agent-that-aims-to-be-a-software-engineer/"
+
+- id: claude-3-sonnet-coding-2024
+  date: 2024-03-04
+  era: agentic-development
+  title: "Claude 3 Opus/Sonnet for Coding"
+  summary: "Anthropic releases Claude 3 family with strong coding benchmarks. Sonnet offers speed-quality balance that powers many agentic coding tools throughout 2024."
+  category: tool
+  sources:
+    - label: "Anthropic"
+      url: "https://www.anthropic.com/news/claude-3-family"
+
+- id: swe-bench-agent-progress-2024
+  date: 2024-04-02
+  era: agentic-development
+  title: "SWE-bench Agent Benchmarks"
+  summary: "AI agents begin solving real GitHub issues on SWE-bench. Progress from single-digit to double-digit solve rates demonstrates rapid improvement in autonomous coding capability."
+  category: data
+  sources:
+    - label: "SWE-bench"
+      url: "https://www.swebench.com/"
+
+- id: cursor-composer-2024
+  date: 2024-08-01
+  era: ai-native-editors
+  title: "Cursor Composer Multi-File Editing"
+  summary: "Cursor launches Composer, enabling simultaneous edits across multiple files from a single prompt. Multi-file orchestration becomes a defining feature of AI-native IDEs."
+  category: tool
+  sources:
+    - label: "Cursor Changelog"
+      url: "https://cursor.com/changelog"
+
+- id: github-models-2024
+  date: 2024-08-01
+  era: ai-native-editors
+  title: "GitHub Models Preview"
+  summary: "GitHub launches Models, letting developers experiment with multiple LLMs directly in the platform. Signals convergence of model hosting and developer workflows."
+  category: tool
+  sources:
+    - label: "GitHub Blog"
+      url: "https://github.blog/changelog/2024-07-25-github-models-is-now-in-public-preview/"
+
+- id: copilot-workspace-2024
+  date: 2024-04-29
+  era: agentic-development
+  title: "GitHub Copilot Workspace Preview"
+  summary: "GitHub unveils Copilot Workspace, an agentic environment that plans, codes, and tests from an issue description. GitHub's answer to the autonomous agent paradigm."
+  category: tool
+  sources:
+    - label: "GitHub Blog"
+      url: "https://github.blog/news-insights/product-news/github-copilot-workspace/"
+
+- id: aider-cli-2024
+  date: 2024-03-15
+  era: agentic-development
+  title: "Aider CLI Agent Maturity"
+  summary: "Aider gains widespread adoption as an open-source terminal agent that edits code via git-aware diffs. Demonstrates the terminal-native agent pattern alongside IDE tools."
+  category: tool
+  sources:
+    - label: "Aider"
+      url: "https://aider.chat/"
+
+- id: continue-dev-2024
+  date: 2024-06-01
+  era: ai-native-editors
+  title: "Continue.dev Open-Source IDE Extension"
+  summary: "Continue grows as the leading open-source AI code assistant extension for VS Code and JetBrains. Custom model support and local LLM integration appeal to privacy-conscious developers."
+  category: tool
+  sources:
+    - label: "Continue"
+      url: "https://continue.dev/"
+
+- id: windsurf-launch-2024
+  date: 2024-11-13
+  era: agentic-development
+  title: "Windsurf Editor Launch"
+  summary: "Codeium launches Windsurf, an AI-native IDE with Cascade agent flows. Competes directly with Cursor on multi-file agentic editing with deep Codeium model integration."
+  category: tool
+  sources:
+    - label: "Windsurf"
+      url: "https://windsurf.com/blog/windsurf-launch"
+    - label: "TechCrunch"
+      url: "https://techcrunch.com/2024/11/13/codeium-launches-windsurf-an-agentic-ai-powered-ide/"
+
+- id: mcp-announced-2024
+  date: 2024-11-25
+  era: protocols-standards
+  title: "Model Context Protocol (MCP) Announced"
+  summary: "Anthropic open-sources MCP, a standard for connecting AI models to tools and data sources. Described as 'USB-C for AI,' it defines client-host-server architecture for agent tool access."
+  category: protocol
+  sources:
+    - label: "Anthropic"
+      url: "https://www.anthropic.com/news/model-context-protocol"
+    - label: "MCP Specification"
+      url: "https://modelcontextprotocol.io/"
+
+- id: cursor-agent-mode-2024
+  date: 2024-12-01
+  era: agentic-development
+  title: "Cursor Agent Mode"
+  summary: "Cursor ships Agent mode with autonomous tool use, terminal commands, and file operations. The IDE agent loop — perceive, plan, act, observe — becomes mainstream."
+  category: tool
+  sources:
+    - label: "Cursor Changelog"
+      url: "https://cursor.com/changelog"
+
+- id: openai-o1-coding-2024
+  date: 2024-09-12
+  era: agentic-development
+  title: "OpenAI o1 Reasoning Models"
+  summary: "OpenAI releases o1 with extended chain-of-thought reasoning. Improved performance on complex coding and debugging tasks influences agent architecture design."
+  category: tool
+  sources:
+    - label: "OpenAI"
+      url: "https://openai.com/index/introducing-openai-o1-preview/"
+
+- id: vibe-coding-2025
+  date: 2025-02-02
+  era: orchestration-skills
+  title: "Vibe Coding Coined by Karpathy"
+  summary: "Andrej Karpathy tweets about 'vibe coding' — accepting AI suggestions with minimal scrutiny, focusing on the feel of the product over line-by-line understanding. Becomes a cultural flashpoint."
+  category: culture
+  sources:
+    - label: "Karpathy on X"
+      url: "https://x.com/karpathy/status/1886192184857869998"
+
+- id: claude-code-preview-2025
+  date: 2025-02-24
+  era: orchestration-skills
+  title: "Claude Code Preview"
+  summary: "Anthropic launches Claude Code, a terminal-native agent that reads codebases, edits files, runs tests, and creates PRs. Terminal agents emerge as a distinct architecture from IDE forks."
+  category: tool
+  sources:
+    - label: "Anthropic"
+      url: "https://www.anthropic.com/news/claude-code"
+
+- id: openai-mcp-adoption-2025
+  date: 2025-03-26
+  era: protocols-standards
+  title: "OpenAI Adopts MCP"
+  summary: "OpenAI announces MCP support across ChatGPT desktop, Agents SDK, and Responses API. Major industry alignment behind Anthropic's protocol accelerates MCP ecosystem growth."
+  category: protocol
+  sources:
+    - label: "OpenAI"
+      url: "https://openai.com/index/mcp/"
+
+- id: google-a2a-2025
+  date: 2025-04-09
+  era: protocols-standards
+  title: "Google Agent2Agent (A2A) Protocol"
+  summary: "Google launches A2A, an open protocol for agent-to-agent communication with Agent Cards for capability discovery. Complements MCP: MCP connects agents to tools, A2A connects agents to agents."
+  category: protocol
+  sources:
+    - label: "Google Developers"
+      url: "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/"
+    - label: "A2A Protocol"
+      url: "https://a2a-protocol.org/"
+
+- id: so-survey-2025-ai
+  date: 2025-05-28
+  era: orchestration-skills
+  title: "Stack Overflow 2025: 84% Adoption, 29% Trust"
+  summary: "AI adoption reaches 84% while trust drops to 29% and favorability to 60%. 51% use AI tools daily; 52% still don't use AI agents — the trust paradox and agent gap define 2025."
+  category: data
+  sources:
+    - label: "Stack Overflow Survey 2025"
+      url: "https://survey.stackoverflow.co/2025/AI"
+  stats:
+    - label: "Using or planning AI"
+      value: "84%"
+    - label: "Trust AI output"
+      value: "29%"
+    - label: "Daily AI use"
+      value: "51%"
+    - label: "No agent use"
+      value: "52%"
+
+- id: cursor-background-agent-2025
+  date: 2025-03-01
+  era: orchestration-skills
+  title: "Cursor Background Agents"
+  summary: "Cursor introduces background agents that work asynchronously on tasks in remote environments. Multi-agent orchestration moves from concept to production feature."
+  category: tool
+  sources:
+    - label: "Cursor Changelog"
+      url: "https://cursor.com/changelog"
+
+- id: github-copilot-agent-mode-2025
+  date: 2025-05-01
+  era: orchestration-skills
+  title: "GitHub Copilot Agent Mode"
+  summary: "GitHub adds agent mode to Copilot in VS Code, enabling autonomous multi-step task completion with tool use. The plugin architecture catches up to forked IDE capabilities."
+  category: tool
+  sources:
+    - label: "GitHub Blog"
+      url: "https://github.blog/changelog/"
+
+- id: agents-md-standard-2025
+  date: 2025-08-01
+  era: orchestration-skills
+  title: "AGENTS.md Open Standard"
+  summary: "The AGENTS.md convention emerges as a README for AI agents — project context, build commands, and conventions in a machine-readable format. Adopted by Cursor, OpenAI Codex, and others."
+  category: protocol
+  sources:
+    - label: "agents.md"
+      url: "https://agents.md/"
+
+- id: cursor-skills-2025
+  date: 2025-06-01
+  era: orchestration-skills
+  title: "Cursor Skills Framework"
+  summary: "Cursor introduces Skills — reusable, shareable instruction files that teach agents domain-specific workflows. Skills become the agent equivalent of IDE extensions."
+  category: concept
+  sources:
+    - label: "Cursor Docs"
+      url: "https://cursor.com/docs/context/skills"
+
+- id: mcp-registry-2025
+  date: 2025-07-01
+  era: protocols-standards
+  title: "MCP Server Registry"
+  summary: "Anthropic launches the MCP server registry, a directory of community and official MCP servers. Standardized tool discovery accelerates agent capability expansion."
+  category: protocol
+  sources:
+    - label: "MCP"
+      url: "https://modelcontextprotocol.io/"
+
+- id: aaif-linux-foundation-2025
+  date: 2025-12-09
+  era: protocols-standards
+  title: "AAIF / Linux Foundation for MCP"
+  summary: "The Agentic AI Foundation (AAIF) under the Linux Foundation adopts MCP and related standards. Industry governance formalizes around open agent interoperability protocols."
+  category: protocol
+  sources:
+    - label: "Linux Foundation"
+      url: "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation"
+    - label: "Anthropic"
+      url: "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation"
+
+- id: multi-agent-cursor-2025
+  date: 2025-09-01
+  era: orchestration-skills
+  title: "Multi-Agent Orchestration in IDEs"
+  summary: "Cursor, Windsurf, and Claude Code ship multi-agent modes with parallel workers and orchestrator patterns. The industry shifts from single-agent loops to coordinated agent teams."
+  category: concept
+  sources:
+    - label: "Cursor Docs"
+      url: "https://cursor.com/docs/agent/modes"
+
+- id: context-engineering-2025
+  date: 2025-04-01
+  era: orchestration-skills
+  title: "Context Engineering Emerges"
+  summary: "The term 'context engineering' gains traction as developers focus on what information to feed agents — rules, skills, MCP tools, and indexed codebases — rather than prompt wording alone."
+  category: concept
+  sources:
+    - label: "Anthropic Engineering"
+      url: "https://www.anthropic.com/engineering"
+
+- id: copilot-coding-agent-2025
+  date: 2025-05-19
+  era: orchestration-skills
+  title: "GitHub Copilot Coding Agent"
+  summary: "GitHub launches a cloud-based coding agent that autonomously works on issues, creates branches, and opens pull requests. Closes the gap between plugin and cloud-agent architectures."
+  category: tool
+  sources:
+    - label: "GitHub Blog"
+      url: "https://github.blog/news-insights/product-news/github-copilot-coding-agent/"
+
+- id: gemini-cli-2025
+  date: 2025-06-25
+  era: orchestration-skills
+  title: "Gemini CLI Open Source"
+  summary: "Google open-sources Gemini CLI, a terminal agent with MCP support and Gemini model integration. Terminal-native agents become a three-way race between Anthropic, OpenAI, and Google."
+  category: tool
+  sources:
+    - label: "Google Developers"
+      url: "https://developers.googleblog.com/en/gemini-cli-open-source/"
+
+- id: rules-cursor-2024
+  date: 2024-10-01
+  era: ai-native-editors
+  title: "Cursor Rules (.cursor/rules)"
+  summary: "Cursor popularizes project-level AI rules files that persist instructions across sessions. Precursor to the AGENTS.md standard for machine-readable project context."
+  category: concept
+  sources:
+    - label: "Cursor Docs"
+      url: "https://cursor.com/docs/context/rules"
+
+- id: codebase-indexing-2024
+  date: 2024-07-01
+  era: ai-native-editors
+  title: "Codebase Indexing in AI IDEs"
+  summary: "Cursor, Windsurf, and Copilot ship semantic codebase indexing — embedding files for RAG retrieval. Solves the context window limitation by dynamically fetching relevant code."
+  category: concept
+  sources:
+    - label: "Cursor Docs"
+      url: "https://cursor.com/docs/context/codebase-indexing"
+
+- id: gpt-codex-cli-2025
+  date: 2025-04-16
+  era: orchestration-skills
+  title: "OpenAI Codex CLI"
+  summary: "OpenAI releases Codex as a cloud and CLI agent powered by codex-1 model. Reunites the Codex brand with autonomous agent capabilities a decade after the original API."
+  category: tool
+  sources:
+    - label: "OpenAI"
+      url: "https://openai.com/index/introducing-codex/"
+
+- id: devstral-mistral-2025
+  date: 2025-05-07
+  era: orchestration-skills
+  title: "Devstral — Open Agent Model"
+  summary: "Mistral releases Devstral, an open-weight model optimized for agentic coding. Open-source models begin matching proprietary agent performance on SWE-bench."
+  category: tool
+  sources:
+    - label: "Mistral AI"
+      url: "https://mistral.ai/news/devstral"

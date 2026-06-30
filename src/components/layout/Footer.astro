@@ -1,0 +1,44 @@
+---
+const base = import.meta.env.BASE_URL;
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-24 border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)]">
+  <div class="mx-auto max-w-6xl px-4 py-12">
+    <div class="grid gap-8 sm:grid-cols-3">
+      <div>
+        <h2 class="mb-3 font-serif text-lg">The History of AI-Assisted Development</h2>
+        <p class="text-sm text-[var(--color-text-muted)]">
+          An open-source timeline documenting how AI transformed software development, 2021–2026.
+        </p>
+      </div>
+      <div>
+        <h3 class="mb-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">Explore</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href={base} class="text-[var(--color-text-muted)] no-underline hover:text-[var(--color-copilot)]">Timeline</a></li>
+          <li><a href={`${base}data/`} class="text-[var(--color-text-muted)] no-underline hover:text-[var(--color-copilot)]">Data Dashboard</a></li>
+          <li><a href={`${base}glossary/mcp/`} class="text-[var(--color-text-muted)] no-underline hover:text-[var(--color-copilot)]">Glossary</a></li>
+          <li><a href={`${base}about/`} class="text-[var(--color-text-muted)] no-underline hover:text-[var(--color-copilot)]">About & Sources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="mb-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">Contribute</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="https://github.com/paladini/history-of-ai-assisted-development" class="text-[var(--color-text-muted)] no-underline hover:text-[var(--color-copilot)]" target="_blank" rel="noopener">
+              GitHub Repository
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/paladini/history-of-ai-assisted-development/blob/main/CONTRIBUTING.md" class="text-[var(--color-text-muted)] no-underline hover:text-[var(--color-copilot)]" target="_blank" rel="noopener">
+              Contributing Guide
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 border-t border-[var(--color-border)] pt-8 text-center text-xs text-[var(--color-text-muted)]">
+      <p>MIT License · {year} · Built with Astro</p>
+    </div>
+  </div>
+</footer>

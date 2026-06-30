@@ -1,0 +1,82 @@
+name: Propose Timeline Event
+description: Suggest a new milestone for the AI-assisted development timeline
+title: "[Timeline] "
+labels: ["timeline", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to the timeline! Please provide primary sources for all claims.
+        See [CONTENT_GUIDE.md](../blob/main/CONTENT_GUIDE.md) for the YAML schema.
+
+  - type: input
+    id: title
+    attributes:
+      label: Event Title
+      description: Short title for the milestone
+      placeholder: "GitHub Copilot Technical Preview"
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      description: ISO format (YYYY-MM-DD)
+      placeholder: "2021-06-29"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: era
+    attributes:
+      label: Era
+      options:
+        - inline-pair-programming
+        - conversational-ide
+        - ai-native-editors
+        - agentic-development
+        - protocols-standards
+        - orchestration-skills
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - tool
+        - protocol
+        - concept
+        - culture
+        - data
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: 2-3 sentences describing the milestone
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary Sources
+      description: URLs to official announcements, blogs, or surveys (one per line)
+      placeholder: |
+        GitHub Blog - https://github.blog/...
+        OpenAI - https://openai.com/...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Source Policy
+      options:
+        - label: I confirm all sources are Tier 1 (official blogs, repos, or peer surveys)
+          required: true

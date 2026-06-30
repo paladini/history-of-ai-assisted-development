@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import { loadGlossaryEntries } from '../lib/content';
+
+const glossaryEntries = loadGlossaryEntries();
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="About — The History of AI-Assisted Development"
+  description="Methodology, sources, and how to contribute to this open-source timeline of AI-assisted software development."
+>
+  <Header slot="header" />
+
+  <div class="mx-auto max-w-3xl px-4 py-16">
+    <h1 class="mb-6 font-serif text-4xl">About This Project</h1>
+
+    <div class="space-y-8 text-[var(--color-text-muted)]">
+      <section>
+        <h2 class="mb-3 font-serif text-2xl text-[var(--color-text)]">Mission</h2>
+        <p class="leading-relaxed">
+          This site tells the story of how AI transformed software development between 2021 and 2026.
+          It is designed for developers who missed the last two years and want a single, trustworthy
+          narrative with primary source citations.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-3 font-serif text-2xl text-[var(--color-text)]">Methodology</h2>
+        <p class="leading-relaxed">
+          We prioritize <strong class="text-[var(--color-text)]">Tier 1 sources</strong>: official product
+          announcements, GitHub repositories, and peer-reviewed surveys (Stack Overflow Developer Survey).
+          Tech press is used for context only. Unverified valuation claims are excluded.
+        </p>
+        <p class="mt-3 leading-relaxed">
+          Every timeline event includes at least one primary source link. See
+          <a href="https://github.com/paladini/history-of-ai-assisted-development/blob/main/SOURCES.md">SOURCES.md</a>
+          for the full bibliography.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-3 font-serif text-2xl text-[var(--color-text)]">Contribute</h2>
+        <p class="leading-relaxed">
+          This is an open-source project. You can propose new timeline events, fix inaccuracies,
+          or improve the site by opening a pull request on GitHub.
+        </p>
+        <ul class="mt-3 list-disc space-y-2 pl-6">
+          <li><a href="https://github.com/paladini/history-of-ai-assisted-development/blob/main/CONTRIBUTING.md">Contributing Guide</a></li>
+          <li><a href="https://github.com/paladini/history-of-ai-assisted-development/blob/main/CONTENT_GUIDE.md">Content Guide (YAML schema)</a></li>
+          <li><a href="https://github.com/paladini/history-of-ai-assisted-development/issues/new?template=timeline-event.yml">Propose a Timeline Event</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="mb-3 font-serif text-2xl text-[var(--color-text)]">Glossary</h2>
+        <div class="grid gap-3 sm:grid-cols-2">
+          {glossaryEntries.map((entry) => (
+            <a
+              href={`${base}glossary/${entry.slug}/`}
+              class="rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4 no-underline transition-colors hover:border-[var(--color-copilot)]"
+            >
+              <h3 class="mb-1 text-sm font-medium text-[var(--color-text)]">{entry.title}</h3>
+              <p class="text-xs text-[var(--color-text-muted)]">{entry.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h2 class="mb-3 font-serif text-2xl text-[var(--color-text)]">License</h2>
+        <p class="leading-relaxed">
+          Code is licensed under the <a href="https://github.com/paladini/history-of-ai-assisted-development/blob/main/LICENSE">MIT License</a>.
+          Content (timeline events, glossary articles) is also open for reuse with attribution.
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+title: Skills
+description: Reusable, shareable instruction packages that AI agents invoke for specialized tasks.
+category: concept
+---
+
+## What are Skills?
+
+**Skills** are packaged instructions that teach AI agents how to perform specific tasks. Unlike one-off prompts, skills are **reusable, versionable, and shareable** across projects and teams.
+
+## How skills work
+
+A skill typically contains:
+- **Trigger conditions** — when the agent should use this skill
+- **Step-by-step instructions** — what to do
+- **Tool requirements** — which MCP servers or commands are needed
+- **Examples** — reference implementations
+
+## Implementations
+
+### Cursor Skills
+Markdown files in `.cursor/skills/` that agents discover and invoke automatically. Community skills cover deployment, code review, testing, and more.
+
+### Claude Code Skills
+Similar pattern with `SKILL.md` files that Claude Code loads when relevant to the current task.
+
+### Codex Skills
+OpenAI's terminal agent supports skills for repeatable workflows like PR creation and CI debugging.
+
+## Skills vs Rules
+
+| | Rules | Skills |
+|---|-------|--------|
+| **Scope** | Always active | Invoked on demand |
+| **Purpose** | Conventions & constraints | Task procedures |
+| **Example** | "Use TypeScript strict mode" | "How to deploy to Vercel" |
+
+## Why skills matter
+
+As agent capabilities grow, skills become the **institutional knowledge layer** — capturing how your team deploys, reviews, tests, and operates, in a format agents can execute.

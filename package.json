@@ -1,0 +1,33 @@
+{
+  "name": "history-of-ai-assisted-development",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A museum-quality timeline documenting the evolution of AI-assisted software development (2021–2026)",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "build:verify": "node scripts/build.mjs",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/react": "^4.3.0",
+    "@tailwindcss/vite": "^4.1.8",
+    "astro": "^5.9.0",
+    "framer-motion": "^12.16.0",
+    "mermaid": "^11.6.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "recharts": "^2.15.3",
+    "tailwindcss": "^4.1.8",
+    "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

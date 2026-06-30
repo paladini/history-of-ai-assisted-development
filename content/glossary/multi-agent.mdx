@@ -1,0 +1,44 @@
+---
+title: Multi-Agent Orchestration
+description: Parallel workers, orchestrator patterns, and the emerging multi-agent development paradigm.
+category: concept
+---
+
+## Beyond single agents
+
+As AI coding tools mature, the bottleneck shifts from "can an agent complete a task?" to "can multiple agents work together efficiently?"
+
+## Common patterns
+
+### Orchestrator-Worker
+A lead agent decomposes a task and delegates subtasks to specialized workers:
+- **Orchestrator**: Plans architecture, reviews results
+- **Workers**: Implement features, write tests, fix bugs in parallel
+
+### Pipeline
+Sequential agents with specialized roles:
+1. **Planner** → designs approach
+2. **Implementer** → writes code
+3. **Reviewer** → checks quality
+4. **Tester** → validates behavior
+
+### Swarm
+Multiple identical agents tackle the same problem; best result wins. Useful for exploration and optimization.
+
+## Tool support
+
+- **Cursor**: Background agents, subagent delegation
+- **Claude Code**: Task tool for spawning parallel workers
+- **Copilot**: Coding agent with issue-level parallelism
+- **A2A Protocol**: Standard agent-to-agent delegation
+
+## Challenges
+
+- **Coordination overhead**: Agents may duplicate work or conflict
+- **Context sharing**: Workers need access to shared state
+- **Cost**: Parallel agents multiply token consumption
+- **Review burden**: More output to verify
+
+## When to use multi-agent
+
+Multi-agent shines for well-decomposed tasks: implementing multiple independent features, running parallel test suites, or exploring alternative implementations.

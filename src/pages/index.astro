@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import { Timeline } from '../components/timeline/Timeline';
+import { loadEvents } from '../lib/content';
+
+const events = loadEvents();
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout>
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-[var(--color-border)]">
+    <div class="absolute inset-0 bg-gradient-to-b from-[var(--color-copilot)]/5 to-transparent" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-6xl px-4 py-20 text-center md:py-28">
+      <p class="mb-4 text-sm font-medium uppercase tracking-widest text-[var(--color-copilot)]">
+        2021 — 2026
+      </p>
+      <h1 class="mb-6 font-serif text-4xl leading-tight md:text-6xl">
+        The History of<br />AI-Assisted Development
+      </h1>
+      <p class="mx-auto mb-8 max-w-2xl text-lg text-[var(--color-text-muted)]">
+        From autocomplete to autonomous agents — a museum-quality timeline of how AI transformed software development.
+      </p>
+
+      <!-- Key stats -->
+      <div class="mx-auto mb-10 flex max-w-3xl flex-wrap justify-center gap-4">
+        <div class="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] px-6 py-4">
+          <div class="text-3xl font-semibold text-[var(--color-copilot)]">84%</div>
+          <div class="text-xs text-[var(--color-text-muted)]">AI adoption (SO 2025)</div>
+        </div>
+        <div class="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] px-6 py-4">
+          <div class="text-3xl font-semibold text-[var(--color-culture)]">29%</div>
+          <div class="text-xs text-[var(--color-text-muted)]">Trust AI output</div>
+        </div>
+        <div class="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] px-6 py-4">
+          <div class="text-3xl font-semibold text-[var(--color-cursor)]">51%</div>
+          <div class="text-xs text-[var(--color-text-muted)]">Daily AI use</div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#timeline" class="rounded-lg bg-[var(--color-copilot)] px-6 py-3 text-sm font-medium text-white no-underline transition-opacity hover:opacity-90">
+          Explore the timeline
+        </a>
+        <a href={`${base}glossary/mcp/`} class="rounded-lg border border-[var(--color-border)] px-6 py-3 text-sm font-medium text-[var(--color-text)] no-underline transition-colors hover:border-[var(--color-copilot)]">
+          Read the glossary
+        </a>
+      </div>
+
+      <!-- Mini timeline preview -->
+      <div class="mx-auto mt-16 flex max-w-4xl items-center justify-between overflow-x-auto px-4" aria-label="Timeline preview 2021 to 2026">
+        {['2021', '2022', '2023', '2024', '2025', '2026'].map((year, i) => (
+          <div class="flex flex-col items-center gap-2">
+            <div class="h-2 w-2 rounded-full bg-[var(--color-copilot)]" style={`opacity: ${0.4 + i * 0.12}`}></div>
+            <span class="text-xs text-[var(--color-text-muted)]">{year}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section id="timeline" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="mb-2 text-center font-serif text-3xl">Interactive Timeline</h2>
+    <p class="mb-12 text-center text-[var(--color-text-muted)]">
+      {events.length} milestones across 6 eras · filter by era or category
+    </p>
+    <Timeline client:load events={events} />
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

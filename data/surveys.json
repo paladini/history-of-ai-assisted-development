@@ -1,0 +1,61 @@
+{
+  "source": "Stack Overflow Developer Survey",
+  "sourceUrl": "https://survey.stackoverflow.co/",
+  "years": [2023, 2024, 2025],
+  "adoption": {
+    "label": "Developers using or planning to use AI tools",
+    "data": [
+      { "year": 2023, "value": 70, "source": "https://survey.stackoverflow.co/2023/" },
+      { "year": 2024, "value": 76, "source": "https://survey.stackoverflow.co/2024/" },
+      { "year": 2025, "value": 84, "source": "https://survey.stackoverflow.co/2025/AI" }
+    ]
+  },
+  "trust": {
+    "label": "Developers who trust AI output accuracy",
+    "data": [
+      { "year": 2023, "value": 42, "source": "https://survey.stackoverflow.co/2023/" },
+      { "year": 2024, "value": 40, "source": "https://survey.stackoverflow.co/2024/" },
+      { "year": 2025, "value": 29, "source": "https://survey.stackoverflow.co/2025/AI" }
+    ]
+  },
+  "favorability": {
+    "label": "Developers with favorable view of AI tools",
+    "data": [
+      { "year": 2023, "value": 77, "source": "https://survey.stackoverflow.co/2023/" },
+      { "year": 2024, "value": 72, "source": "https://survey.stackoverflow.co/2024/" },
+      { "year": 2025, "value": 60, "source": "https://survey.stackoverflow.co/2025/AI" }
+    ]
+  },
+  "dailyUse": {
+    "label": "Developers using AI tools daily or almost daily",
+    "data": [
+      { "year": 2025, "value": 51, "source": "https://survey.stackoverflow.co/2025/AI" }
+    ]
+  },
+  "useCases": {
+    "label": "Primary AI use cases (2025)",
+    "source": "https://survey.stackoverflow.co/2025/AI",
+    "data": [
+      { "useCase": "Write code", "value": 82 },
+      { "useCase": "Search/learn", "value": 68 },
+      { "useCase": "Debug code", "value": 55 },
+      { "useCase": "Write tests", "value": 42 },
+      { "useCase": "Documentation", "value": 38 },
+      { "useCase": "Code review", "value": 31 }
+    ]
+  },
+  "agentAdoption": {
+    "label": "Agent adoption (2025)",
+    "source": "https://survey.stackoverflow.co/2025/AI",
+    "data": [
+      { "category": "Use AI agents", "value": 48 },
+      { "category": "Don't use agents", "value": 52 }
+    ]
+  },
+  "githubCopilotStats": {
+    "source": "GitHub Blog, Jun 2022",
+    "sourceUrl": "https://github.blog/news-insights/product-news/github-copilot-is-generally-available-to-all-developers/",
+    "acceptanceRate": 40,
+    "previewDevelopers": "1.2M+"
+  }
+}

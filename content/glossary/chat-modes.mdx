@@ -1,0 +1,42 @@
+---
+title: Chat Modes
+description: Ask, Agent, Plan, and Debug — how modern IDEs structure AI interactions.
+category: concept
+---
+
+## The mode spectrum
+
+Modern AI coding tools offer multiple interaction modes, each optimized for different tasks:
+
+| Mode | Purpose | Examples |
+|------|---------|----------|
+| **Ask** | Q&A without code changes | "What does this function do?" |
+| **Edit** | Targeted code modifications | "Add error handling here" |
+| **Agent** | Autonomous multi-step tasks | "Implement user authentication" |
+| **Plan** | Architecture before execution | "Design the API schema first" |
+| **Debug** | Error investigation | "Why is this test failing?" |
+
+## Tool implementations
+
+### GitHub Copilot
+- **Chat**: Conversational Q&A and code generation
+- **Copilot Edits**: Multi-file editing mode
+- **Coding Agent**: Autonomous issue resolution
+
+### Cursor
+- **Ask**: Read-only exploration
+- **Agent**: Full autonomous loop with terminal access
+- **Manual**: User-guided edits with AI assistance
+
+### Claude Code
+- **Default**: Conversational with tool use
+- **Plan mode**: Structured planning before implementation
+- **Headless**: CI/CD and automation via SDK
+
+## Choosing the right mode
+
+- Use **Ask** when learning or exploring unfamiliar code
+- Use **Edit** for focused, reviewable changes
+- Use **Agent** for well-scoped tasks with clear acceptance criteria
+- Use **Plan** for architectural decisions with trade-offs
+- Use **Debug** when you have a specific error to investigate

@@ -1,0 +1,39 @@
+---
+title: "Prompts & Context Engineering"
+slug: prompts
+description: "How developers communicate intent to AI — from inline comments to system prompts and context windows."
+order: 1
+---
+
+## The evolution of developer-AI communication
+
+AI-assisted development began with **inline prompts**: a comment or function signature that triggers code completion. GitHub Copilot (2021) established this pattern — you write a hint, the model fills in the rest.
+
+By 2023, **chat prompts** emerged as the dominant interface. Developers could ask questions, request refactors, and iterate in natural language dialogue. The shift from completion to conversation required new skills: structuring requests, providing relevant context, and verifying outputs.
+
+## Three layers of prompting
+
+### Inline prompts
+Comments and partial code that trigger completions. Low friction, high speed. Best for boilerplate, repetitive patterns, and API usage you know but don't want to type.
+
+### Chat prompts
+Conversational requests in a sidebar or panel. Better for explanation, debugging, and multi-step reasoning. Requires explicit context — the model only sees what you share.
+
+### System prompts
+Hidden instructions that shape model behavior across a session. IDE rules (`.cursor/rules`), `AGENTS.md`, and Skills files are system-prompt equivalents that persist project conventions.
+
+## Context engineering
+
+By 2025, the industry recognized that **what you include matters more than how you phrase it**. Context engineering — curating files, docs, tool outputs, and rules — became the core skill for effective AI-assisted development.
+
+Key techniques:
+- **@-mentions** — reference specific files, folders, or docs
+- **Codebase indexing** — semantic search retrieves relevant code automatically
+- **Rules files** — persistent project conventions without repeating them
+- **MCP tools** — live data from external systems injected into context
+
+## Related concepts
+
+- [Chat modes](/history-of-ai-assisted-development/glossary/chat-modes/)
+- [Context indexing](/history-of-ai-assisted-development/glossary/context-indexing/)
+- [Skills](/history-of-ai-assisted-development/glossary/skills/)

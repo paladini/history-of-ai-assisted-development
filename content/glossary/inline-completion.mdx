@@ -1,0 +1,42 @@
+---
+title: "Inline Completion"
+slug: inline-completion
+description: "The original AI coding paradigm — ghost text suggestions as you type."
+order: 11
+---
+
+## Where it started
+
+**Inline completion** (also called ghost text or tab completion) is the original AI-assisted coding paradigm. As you type, the model predicts and suggests the next lines of code in a dimmed overlay. Press Tab to accept.
+
+GitHub Copilot (June 2021) made this the default mental model for AI coding.
+
+## How it works
+
+1. The IDE sends your current file context (and sometimes neighboring files) to the model
+2. The model predicts the most likely continuation
+3. Suggestions appear inline, character by character
+4. Accept (Tab), reject (Esc), or partial accept
+
+## Strengths
+
+- **Zero friction** — no context switching to a chat panel
+- **Flow state** — stays in the editor, in the code
+- **Speed** — suggestions appear in milliseconds
+- **Learning** — exposes you to APIs and patterns you might not know
+
+## Limitations
+
+- Limited context (usually current file only)
+- No multi-file awareness in early versions
+- Struggles with complex logic requiring planning
+- Can reinforce existing patterns rather than suggest better ones
+
+## Still dominant
+
+Despite the rise of chat and agents, inline completion remains the most-used AI coding feature. Stack Overflow 2025 reports **82% of developers use AI to write code** — primarily through inline suggestions.
+
+## Related concepts
+
+- [Prompts](/history-of-ai-assisted-development/glossary/prompts/)
+- [Chat modes](/history-of-ai-assisted-development/glossary/chat-modes/)

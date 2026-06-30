@@ -1,0 +1,70 @@
+{
+  "tools": [
+    {
+      "name": "GitHub Copilot",
+      "type": "plugin",
+      "inlineCompletion": true,
+      "chat": true,
+      "multiFile": true,
+      "agent": true,
+      "mcp": true,
+      "terminal": false,
+      "launchYear": 2021
+    },
+    {
+      "name": "Cursor",
+      "type": "fork",
+      "inlineCompletion": true,
+      "chat": true,
+      "multiFile": true,
+      "agent": true,
+      "mcp": true,
+      "terminal": true,
+      "launchYear": 2023
+    },
+    {
+      "name": "Claude Code",
+      "type": "terminal",
+      "inlineCompletion": false,
+      "chat": true,
+      "multiFile": true,
+      "agent": true,
+      "mcp": true,
+      "terminal": true,
+      "launchYear": 2025
+    },
+    {
+      "name": "Devin",
+      "type": "cloud-agent",
+      "inlineCompletion": false,
+      "chat": true,
+      "multiFile": true,
+      "agent": true,
+      "mcp": false,
+      "terminal": true,
+      "launchYear": 2024
+    },
+    {
+      "name": "Windsurf",
+      "type": "fork",
+      "inlineCompletion": true,
+      "chat": true,
+      "multiFile": true,
+      "agent": true,
+      "mcp": true,
+      "terminal": true,
+      "launchYear": 2024
+    },
+    {
+      "name": "Continue",
+      "type": "plugin",
+      "inlineCompletion": true,
+      "chat": true,
+      "multiFile": true,
+      "agent": false,
+      "mcp": true,
+      "terminal": false,
+      "launchYear": 2023
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
+import { loadGlossaryEntries } from '../../lib/content';
+
+const glossaryModules = import.meta.glob('../../../content/glossary/*.mdx');
+
+function findModuleKey(slug: string): string | undefined {
+  return Object.keys(glossaryModules).find((path) => {
+    const normalized = path.replace(/\\/g, '/');
+    return normalized.endsWith(`/${slug}.mdx`);
+  });
+}
+
+export function getStaticPaths() {
+  const entries = loadGlossaryEntries();
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: {
+    slug: string;
+    title: string;
+    description: string;
+    order: number;
+  };
+}
+
+const { entry } = Astro.props;
+const moduleKey = findModuleKey(entry.slug);
+if (!moduleKey) {
+  throw new Error(`Glossary page not found: ${entry.slug}`);
+}
+const { Content } = await glossaryModules[moduleKey]();
+const allEntries = loadGlossaryEntries();
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title={`${entry.title} — Glossary`} description={entry.description}>
+  <Header slot="header" />
+
+  <div class="mx-auto max-w-6xl px-4 py-16">
+    <div class="grid gap-12 lg:grid-cols-4">
+      <aside class="lg:col-span-1">
+        <nav aria-label="Glossary navigation">
+          <h2 class="mb-4 text-sm font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
+            Glossary
+          </h2>
+          <ul class="space-y-1">
+            {allEntries.map((item) => (
+              <li>
+                <a
+                  href={`${base}glossary/${item.slug}/`}
+                  class:list={[
+                    'block rounded-md px-3 py-2 text-sm no-underline transition-colors',
+                    item.slug === entry.slug
+                      ? 'bg-[var(--color-bg-elevated)] text-[var(--color-text)]'
+                      : 'text-[var(--color-text-muted)] hover:text-[var(--color-text)]',
+                  ]}
+                  aria-current={item.slug === entry.slug ? 'page' : undefined}
+                >
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+
+      <article class="lg:col-span-3">
+        <h1 class="font-serif text-4xl">{entry.title}</h1>
+        <p class="text-lg text-[var(--color-text-muted)]">{entry.description}</p>
+        <div class="glossary-content mt-8 max-w-none text-[var(--color-text)]">
+          <Content />
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  .glossary-content :global(h2) {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+  .glossary-content :global(h3) {
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+  }
+  .glossary-content :global(p) {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+  }
+  .glossary-content :global(ul),
+  .glossary-content :global(ol) {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    color: var(--color-text-muted);
+  }
+  .glossary-content :global(li) {
+    margin-bottom: 0.25rem;
+  }
+  .glossary-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+  .glossary-content :global(th),
+  .glossary-content :global(td) {
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+  }
+  .glossary-content :global(th) {
+    background: var(--color-bg-elevated);
+    color: var(--color-text);
+  }
+  .glossary-content :global(code) {
+    background: var(--color-bg-elevated);
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+  }
+  .glossary-content :global(pre) {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+  }
+  .glossary-content :global(blockquote) {
+    border-left: 3px solid var(--color-copilot);
+    padding-left: 1rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+  .glossary-content :global(a) {
+    color: var(--color-copilot);
+  }
+</style>

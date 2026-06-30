@@ -1,0 +1,37 @@
+---
+title: Agent2Agent (A2A)
+description: Google's protocol for agent-to-agent communication — complementing MCP's agent-to-tool focus.
+category: protocol
+---
+
+## What is A2A?
+
+The **Agent2Agent (A2A) Protocol** is an open standard announced by Google on April 9, 2025. While MCP connects agents to **tools**, A2A connects agents to **other agents**.
+
+## Core concepts
+
+### Agent Cards
+JSON documents describing an agent's capabilities, skills, and endpoint. Think of them as business cards for AI agents — enabling discovery and delegation.
+
+### Task lifecycle
+A2A defines a standard task flow:
+1. **Submit** — client sends a task to an agent
+2. **Process** — agent works on the task (may delegate to other agents)
+3. **Update** — streaming status updates
+4. **Complete** — final artifact or result
+
+### Message format
+Structured messages with parts (text, files, data) that agents exchange during collaboration.
+
+## MCP + A2A complementarity
+
+| Protocol | Connects | Example |
+|----------|----------|---------|
+| **MCP** | Agent → Tool | Query a database, create a GitHub issue |
+| **A2A** | Agent → Agent | Delegate code review to a specialized agent |
+
+Both protocols are designed to work together. An orchestrator agent might use A2A to delegate tasks and MCP to access tools within each task.
+
+## Governance
+
+A2A is supported by Google, SAP, Salesforce, and others. Like MCP, it moved under the Linux Foundation's Agentic AI Foundation (AAIF) in late 2025.

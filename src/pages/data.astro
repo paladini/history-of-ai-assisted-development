@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import { AdoptionChart } from '../components/charts/AdoptionChart';
+import { UseCasesChart } from '../components/charts/UseCasesChart';
+import { AgentAdoptionChart } from '../components/charts/AgentAdoptionChart';
+import { EvolutionLadder } from '../components/diagrams/EvolutionLadder';
+import { McpStackDiagram } from '../components/diagrams/McpStackDiagram';
+import { McpA2aDiagram } from '../components/diagrams/McpA2aDiagram';
+import { AgentLoopDiagram } from '../components/diagrams/AgentLoopDiagram';
+import surveyData from '../../data/surveys.json';
+
+const adoptionTrustData = surveyData.adoption.data.map((item) => ({
+  year: String(item.year),
+  adoption: item.value,
+  trust: surveyData.trust.data.find((t) => t.year === item.year)?.value ?? null,
+  favorability: surveyData.favorability.data.find((f) => f.year === item.year)?.value ?? 0,
+}));
+
+const useCasesData = surveyData.useCases.data.map((item) => ({
+  name: item.useCase,
+  value: item.value,
+}));
+
+const agentAdoptionData = surveyData.agentAdoption.data.map((item) => ({
+  name: item.category,
+  value: item.value,
+}));
+---
+
+<BaseLayout
+  title="Data & Diagrams — The History of AI-Assisted Development"
+  description="Stack Overflow survey data, adoption curves, trust paradox charts, and architecture diagrams for AI-assisted development."
+>
+  <Header slot="header" />
+
+  <div class="mx-auto max-w-6xl px-4 py-16">
+    <h1 class="mb-2 font-serif text-4xl">Data & Diagrams</h1>
+    <p class="mb-12 max-w-2xl text-[var(--color-text-muted)]">
+      Survey data from Stack Overflow Developer Surveys (2023–2025) and architecture diagrams
+      documenting the evolution of AI-assisted development.
+    </p>
+
+    <!-- Charts -->
+    <section class="mb-16" aria-labelledby="charts-heading">
+      <h2 id="charts-heading" class="mb-8 font-serif text-2xl">Survey Data</h2>
+      <div class="grid gap-8 lg:grid-cols-2">
+        <div class="lg:col-span-2">
+          <AdoptionChart client:load data={adoptionTrustData} />
+        </div>
+        <UseCasesChart client:load data={useCasesData} />
+        <AgentAdoptionChart client:load data={agentAdoptionData} />
+      </div>
+      <p class="mt-6 text-sm text-[var(--color-text-muted)]">
+        Source: <a href="https://survey.stackoverflow.co/2025/AI">Stack Overflow Developer Survey</a>.
+        Raw data in <a href="https://github.com/paladini/history-of-ai-assisted-development/blob/main/data/surveys.json">data/surveys.json</a>.
+      </p>
+    </section>
+
+    <!-- Diagrams -->
+    <section aria-labelledby="diagrams-heading">
+      <h2 id="diagrams-heading" class="mb-8 font-serif text-2xl">Architecture Diagrams</h2>
+      <div class="grid gap-8 md:grid-cols-2">
+        <EvolutionLadder client:load />
+        <McpStackDiagram client:load />
+        <McpA2aDiagram client:load />
+        <AgentLoopDiagram client:load />
+      </div>
+    </section>
+  </div>
+
+  <Footer slot="footer" />
+</BaseLayout>

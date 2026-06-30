@@ -1,0 +1,40 @@
+name: Bug Report
+description: Report a bug or inaccuracy on the site
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the bug or inaccuracy?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce the issue?
+    validations:
+      required: false
+
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      description: Which page has the issue?
+      placeholder: "/glossary/mcp/"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Factual error in timeline content
+        - Broken link or source
+        - UI/accessibility issue
+        - Build or deployment issue
+        - Other

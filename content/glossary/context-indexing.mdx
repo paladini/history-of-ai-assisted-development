@@ -1,0 +1,52 @@
+---
+title: "Context Window & Codebase Indexing"
+slug: context-indexing
+description: "How AI IDEs overcome limited context windows with semantic search and RAG."
+order: 10
+---
+
+## The context window problem
+
+LLMs have finite context windows — even 200K tokens can't fit an entire large codebase. Early AI tools only saw the current file or manually selected snippets.
+
+## Codebase indexing
+
+Starting in 2024, AI-native IDEs shipped **semantic codebase indexing**:
+
+1. **Embed** — Convert code files into vector embeddings
+2. **Index** — Store embeddings in a searchable index
+3. **Retrieve** — When you ask a question, find the most relevant files/chunks
+4. **Inject** — Add retrieved code to the model's context window
+
+This is **Retrieval-Augmented Generation (RAG)** applied to local codebases.
+
+## Tools with indexing
+
+| Tool | Feature | Method |
+|------|---------|--------|
+| Cursor | Codebase indexing | Embeddings + @-mentions |
+| Copilot | Workspace context | Semantic search |
+| Windsurf | Context engine | Indexed embeddings |
+| Sourcegraph Cody | Code search | Pre-indexed repos |
+
+## @-mentions and manual context
+
+Beyond automatic retrieval, developers can explicitly include context:
+
+- `@filename.ts` — specific file
+- `@folder/` — entire directory
+- `@docs` — documentation
+- `@web` — web search results
+- `@git` — git history and diffs
+
+## Best practices
+
+- Keep indexed repos focused (monorepo subdirectories)
+- Exclude generated files and dependencies from indexing
+- Use rules to tell agents which files matter
+- Combine automatic retrieval with explicit @-mentions for critical context
+
+## Related concepts
+
+- [Prompts](/history-of-ai-assisted-development/glossary/prompts/)
+- [MCP](/history-of-ai-assisted-development/glossary/mcp/)

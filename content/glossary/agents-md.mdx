@@ -1,0 +1,37 @@
+---
+title: AGENTS.md & Rules
+description: Project-level context files that teach AI agents your conventions, architecture, and workflows.
+category: protocol
+---
+
+## The problem
+
+Every time you start a new agent session, the AI starts from zero. It doesn't know your project's architecture, naming conventions, test patterns, or deployment process.
+
+## The solution: project context files
+
+### AGENTS.md
+An open standard ([agents.md](https://agents.md)) for a vendor-neutral README aimed at AI agents. Contains:
+- Project overview and architecture
+- Build and test commands
+- Code conventions and style
+- Directory structure guide
+- Security considerations
+
+### Cursor Rules (`.cursor/rules/`)
+Markdown files with persistent instructions that Cursor agents follow across sessions. Can be scoped globally or per-directory.
+
+### CLAUDE.md
+Claude Code's equivalent — a project-level context file loaded automatically.
+
+## Best practices
+
+1. **Be specific**: "Use pnpm, not npm" beats "use the right package manager"
+2. **Include commands**: Exact build, test, and lint commands
+3. **Document architecture**: Key directories, data flow, API patterns
+4. **Keep it current**: Outdated rules are worse than no rules
+5. **Layer context**: AGENTS.md for overview, rules for specifics, skills for procedures
+
+## The convergence
+
+AGENTS.md, Cursor Rules, and CLAUDE.md represent the same insight: **AI agents need persistent project memory**. The industry is converging on open standards rather than vendor-locked formats.
