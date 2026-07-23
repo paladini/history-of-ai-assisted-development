@@ -1,6 +1,6 @@
 # The History of AI-Assisted Development
 
-<img alt="Harness Score L0" src="https://paladini.github.io/harness-score/maturity/badge-l0.svg" height="20">
+<a href="https://paladini.github.io/harness-score/guide/maturity-model#l0-unharnessed" title="Harness Score — AI coding harness maturity"><img alt="Harness Score L0 (Unharnessed): measures AI-assisted development harness maturity with harness-score" src="https://paladini.github.io/harness-score/maturity/badge-l0.svg" height="20"></a>
 [![Deploy](https://github.com/paladini/history-of-ai-assisted-development/actions/workflows/deploy.yml/badge.svg)](https://github.com/paladini/history-of-ai-assisted-development/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
