@@ -1,20 +1,21 @@
-# The History of AI-Assisted Development
+﻿# The History of AI-Assisted Development
 
+<img alt="Harness Score L0" src="https://paladini.github.io/harness-score/maturity/badge-l0.svg" height="20">
 [![Deploy](https://github.com/paladini/history-of-ai-assisted-development/actions/workflows/deploy.yml/badge.svg)](https://github.com/paladini/history-of-ai-assisted-development/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-A museum-quality, scroll-driven timeline documenting the evolution of AI-assisted software development — from GitHub Copilot inline completions (2021) to multi-agent orchestration, MCP, A2A, Skills, and AGENTS.md (2026).
+A museum-quality, scroll-driven timeline documenting the evolution of AI-assisted software development â€” from GitHub Copilot inline completions (2021) to multi-agent orchestration, MCP, A2A, Skills, and AGENTS.md (2026).
 
 **Live site:** [paladini.github.io/history-of-ai-assisted-development](https://paladini.github.io/history-of-ai-assisted-development/)
 
 ## Features
 
-- **Interactive timeline** — 45+ researched milestones across 6 eras with primary source citations
-- **Glossary** — 12 concept pages (MCP, A2A, agents, skills, vibe coding, and more)
-- **Data dashboard** — Stack Overflow survey charts (adoption, trust paradox, use cases)
-- **Architecture diagrams** — Mermaid diagrams for MCP stack, agent loops, evolution ladder
-- **Open source** — MIT licensed, community contributions welcome
+- **Interactive timeline** â€” 45+ researched milestones across 6 eras with primary source citations
+- **Glossary** â€” 12 concept pages (MCP, A2A, agents, skills, vibe coding, and more)
+- **Data dashboard** â€” Stack Overflow survey charts (adoption, trust paradox, use cases)
+- **Architecture diagrams** â€” Mermaid diagrams for MCP stack, agent loops, evolution ladder
+- **Open source** â€” MIT licensed, community contributions welcome
 
 ## Quick Start
 
@@ -29,12 +30,12 @@ Open [http://localhost:4321/history-of-ai-assisted-development/](http://localhos
 
 ## Tech Stack
 
-- [Astro 5](https://astro.build/) — static site generation
-- [React](https://react.dev/) — interactive islands (timeline, charts)
-- [Tailwind CSS v4](https://tailwindcss.com/) — styling
-- [Framer Motion](https://www.framer.com/motion/) — scroll animations
-- [Recharts](https://recharts.org/) — data visualizations
-- [Mermaid](https://mermaid.js.org/) — architecture diagrams
+- [Astro 5](https://astro.build/) â€” static site generation
+- [React](https://react.dev/) â€” interactive islands (timeline, charts)
+- [Tailwind CSS v4](https://tailwindcss.com/) â€” styling
+- [Framer Motion](https://www.framer.com/motion/) â€” scroll animations
+- [Recharts](https://recharts.org/) â€” data visualizations
+- [Mermaid](https://mermaid.js.org/) â€” architecture diagrams
 
 ## Project Structure
 
@@ -52,4 +53,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and [CONTENT_GUIDE.
 
 ## License
 
-[MIT](LICENSE) — code and content are open for reuse with attribution.
+[MIT](LICENSE) â€” code and content are open for reuse with attribution.
